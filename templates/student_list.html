@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+    <center>
+        <h1>Student List</h1>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Hobbies</th>
+                <th>School Type</th>
+                <th>School Logo</th>
+            </tr>
+            {% for student in SL  %}
+            <tr>
+                <td>{{ student.sname }}</td>
+                <td>{{ student.sage }}</td>
+                <td>{{ student.semail }}</td>
+                <td>{{ student.spassword }}</td>
+                <td>{{ student.address }}</td>
+                <td>{{ student.hubby }}</td>
+                <td>{{ student.school_type }}</td>
+                <td><img src="{{ student.school_logo.url }}" alt="School Logo" width="50" height="50"></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
